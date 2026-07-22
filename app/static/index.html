@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <main class="container">
+        <div class="glass-card">
+            <h1 class="gradient-text">Давайте создадим что-то великое</h1>
+            <p class="subtitle">Заполните форму ниже, и мой AI-ассистент ответит вам в ту же секунду.</p>
+
+            <form id="contactForm" class="contact-form">
+                <div class="input-group">
+                    <label for="name">Ваше имя</label>
+                    <input type="text" id="name" name="name" required minlength="2" maxlength="50" placeholder="Иван Иванов">
+                </div>
+
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="phone">Телефон</label>
+                        <input type="tel" id="phone" name="phone" required minlength="10" maxlength="20" placeholder="+7 999 123 45 67">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="hello@example.com">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="comment">Проект или идея</label>
+                    <textarea id="comment" name="comment" rows="4" required minlength="5" maxlength="1000" placeholder="Опишите, чем я могу вам помочь..."></textarea>
+                </div>
+
+                <button type="submit" id="submitBtn">
+                    <span class="btn-text">Отправить сообщение</span>
+                    <div class="spinner hide" id="spinner"></div>
+                </button>
+            </form>
+
+            <div id="alertBox" class="alert hide">
+                <p id="alertMessage"></p>
+                <div id="aiResponseBox" class="ai-response hide">
+                    <p class="ai-label">Ответ AI-ассистента:</p>
+                    <p id="aiReplyText"></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
